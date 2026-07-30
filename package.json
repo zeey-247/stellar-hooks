@@ -5,7 +5,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "description": "React hooks for Stellar and Soroban — useFreighter, useStellarAccount, useSorobanContract, useTransaction, and more.",
+  "description": "React hooks for Stellar and Soroban \u2014 useFreighter, useStellarAccount, useSorobanContract, useTransaction, and more.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -675,9 +675,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "node api.js && tsup",
     "build:types-package": "npm --prefix packages/types run build",
-    "dev": "tsup --watch",
+    "dev": "node api.js && tsup --watch",
     "lint": "eslint src --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
     "test": "cross-env NODE_OPTIONS=\"--experimental-require-module\" vitest run",
